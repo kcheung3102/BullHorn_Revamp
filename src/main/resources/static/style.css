@@ -1,0 +1,40 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: #44C184;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 1.5;
+    position: relative;
+    background: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+}
+
+nav {
+    background-color: #232A3B;
+    color: #fff;
+    font-size: 1.4em;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+header p {
+    background: #232A3B;
+}
