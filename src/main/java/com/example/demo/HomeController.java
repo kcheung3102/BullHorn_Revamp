@@ -31,7 +31,7 @@ public class HomeController {
 
     @GetMapping("/add")
     public String messageForm(Model model) {
-        model.addAttribute("message" , new Message());
+        model.addAttribute("messages" , new Message());
         return "messageform";
     }
 

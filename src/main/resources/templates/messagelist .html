@@ -2,37 +2,22 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cover Page</title>
+    <title>Message List </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link  rel="stylesheet" type="text/css" th:href="@{style.css}">
 </head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <a href="/add">Add a Job</a>
+                <div th:each="message : ${messages}">
 
-
-<body class="text-center">
-<nav th:replace="base :: navbar"></nav>
-
-    <main role="main" class="inner-cover">
-        <h1 class="cover-heading">GoMessage</h1>
-        <p class="lead">Write your first message!</p>
-        <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary">Write a Message</a>
-        </p>
-    </main>
-
-<div class="row">
-    <div class="col-md-4">
-        <div class="single-blog">
-
+                    <h4 th:text="${message.content}"></h4>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-
-    <footer th:replace="base" :: footer></footer>
-
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
